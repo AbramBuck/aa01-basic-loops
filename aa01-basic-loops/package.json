@@ -7,7 +7,7 @@
   "author": "App Academy",
   "license": "ISC",
   "dependencies": {
-    "chai": "^4.3.10",
+    "chai": "^4.4.1",
     "chai-spies": "^1.1.0",
     "mocha": "^10.2.0"
   }
