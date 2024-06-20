@@ -14,3 +14,4 @@ Vowels are the letters "a", "e", "i", "o", "u".
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = hasVowel;
+

@@ -10,8 +10,22 @@ return anything.
 */
 
 // Your code here 
+/*SUMMARY: define a function that takes 3 numbers. It should print out numbers between the minNum and maxNum in intervals of the third Num. intrvlNum
+1. declare a function called "logBetweenStepper"
+2. it needs to take 3 parameters, minNum, maxNum, and intrvlNum
+3. it needs to print out the number range from minNum to maxNum in intervals of the intervlNum 
+*/
 
-// logBetweenStepper(5, 9, 1);
+function logBetweenStepper(minNum, maxNum, intrvlNum) {
+    let index = minNum - 1;
+
+    while (index <= maxNum - 1) {
+        console.log(index + intrvlNum);
+        index += intrvlNum;
+    }
+}
+
+logBetweenStepper(5, 9, 1);
 /* prints out:
 5
 6

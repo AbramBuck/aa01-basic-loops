@@ -5,12 +5,16 @@ half of characters in the string parameter.
 */
 
 function secondHalf(str) {
-  // Your code here 
+  newStr = "";
+  fullStr = str.length;
+  findHalf = ((fullStr) / 2);
+  backHalfStr = str.substring(findHalf,fullStr);
+  return backHalfStr;
 }
 
-// console.log(secondHalf('academy')); // 'emy'
-// console.log(secondHalf('planet'));  // 'net'
-// console.log(secondHalf('sport'));   // 'rt'
+console.log(secondHalf('academy')); // 'emy'
+console.log(secondHalf('planet'));  // 'net'
+console.log(secondHalf('sport'));   // 'rt'
 
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/

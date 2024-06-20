@@ -31,7 +31,7 @@ function aCounter(word) {
   return count;
 }
 
-// console.log(aCounter("apple"));      // => 1
+console.log(aCounter("apple"));      // => 1
 // console.log(aCounter("appleapple")); // => 2
 // console.log(aCounter("aAapple"));    // => 3
 
