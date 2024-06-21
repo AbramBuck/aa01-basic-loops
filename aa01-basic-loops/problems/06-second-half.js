@@ -7,7 +7,7 @@ half of characters in the string parameter.
 function secondHalf(str) {
   newStr = "";
   fullStr = str.length;
-  findHalf = ((fullStr) / 2);
+  findHalf = (Math.ceil((fullStr) / 2));
   backHalfStr = str.substring(findHalf,fullStr);
   return backHalfStr;
 }

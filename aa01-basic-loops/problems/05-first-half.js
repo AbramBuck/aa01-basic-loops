@@ -12,8 +12,8 @@ half of characters in the string parameter.
 
 function firstHalf(str) {
   newStr = "";
-  findHalf = ((str.length) / 2);
-  alfStr = str.substring(0,findHalf);
+  findHalf = (Math.ceil((str.length) / 2));
+  halfStr = str.substring(0,findHalf);
   return halfStr;
 }
 

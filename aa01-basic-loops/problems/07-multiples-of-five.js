@@ -15,10 +15,11 @@ number parameter that are multiples of 5.
 function multiplesOfFive(num) {
     let index = 0;
 
-    while (index * 5 <= num) {
+    while (index * 5 < num) {
         console.log(index * 5);
         index ++;
     }
+    
 }
 
 
