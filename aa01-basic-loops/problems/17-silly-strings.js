@@ -13,30 +13,30 @@ Vowels are the letters "a", "e", "i", "o", "u".
 
 // Your code here 
 function sillyString(str) {
-    let vowels = "aeiouAEIOU";
-    newStr = "";
+    let newStr = "";
 //Example word Sir
 // i is 0, keep going when i >= string length. add 1 to index each iteration
-    for (i = 0; i >= str.length; i++) {
+    for (i = 0; i < str.length; i++ ) {
         let letter = str[i];
+
         // if the letter is in vowels
-        if (vowels.includes(letter)) {
+        if (letter !== "a" && letter !== "e" && letter !== "i" && letter !== "o" && letter !== "u" && letter !== "A" && letter !== "E" && letter !== "I" && letter !== "O" && letter !== "U") {
             //add the letter and a b to new string
-            newStr += letter + "b";
-        } else {
             newStr += letter;
+        } else {
+            newStr += letter  + "b";
         }
-    return newStr;
     }
+    return newStr;
 }
 
 console.log(sillyString("Sir"));
-// console.log(sillyString('stop'));       // stobop
-// console.log(sillyString('that'));       // thabat
-// console.log(sillyString('can'));        // caban
-// console.log(sillyString('cats'));       // cabats
-// console.log(sillyString('italy'));      // ibitabaly
-// console.log(sillyString('scooter'));    // scobooboteber
+console.log(sillyString('stop'));       // stobop
+console.log(sillyString('that'));       // thabat
+console.log(sillyString('can'));        // caban
+console.log(sillyString('cats'));       // cabats
+console.log(sillyString('italy'));      // ibitabaly
+console.log(sillyString('scooter'));    // scobooboteber
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = sillyString;
