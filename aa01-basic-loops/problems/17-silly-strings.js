@@ -10,21 +10,45 @@ Vowels are the letters "a", "e", "i", "o", "u".
 
 */
 
-
+/*
 // Your code here 
 function sillyString(str) {
     let newStr = "";
-//Example word Sir
-// i is 0, keep going when i >= string length. add 1 to index each iteration
-    for (i = 0; i < str.length; i++ ) {
+
+    for (let i = 0; i < str.length; i++) {
+        let letter = str[i];
+        let letterAndB = str[i] += "b";
+
+        // Check if the letter is a vowel
+        if (letter === "a" || letter === "e" || letter === "i" || letter === "o" || letter === "u" ||
+            letter === "A" || letter === "E" || letter === "I" || letter === "O" || letter === "U") {
+            // If it is a vowel, add the letter followed by 'b'
+            newStr += letterAndB;
+        } else {
+            // If it is not a vowel, just add the letter
+            newStr += letter;
+        }
+    }
+    return newStr;
+}
+*/
+function sillyString(str) {
+    let newStr = "";
+    let vowels = "aeiouAEIOU";
+
+    for (let i = 0; i < str.length; i++) {
         let letter = str[i];
 
-        // if the letter is in vowels
-        if (letter !== "a" && letter !== "e" && letter !== "i" && letter !== "o" && letter !== "u" && letter !== "A" && letter !== "E" && letter !== "I" && letter !== "O" && letter !== "U") {
-            //add the letter and a b to new string
-            newStr += letter;
+        // Check if the current character is a vowel
+        if (vowels.includes(letter)) {
+            // Check if the previous character was not a vowel to avoid adding 'b' twice for consecutive vowels
+            if (i === 0 || !vowels.includes(str[i - 1])) {
+                newStr += letter + "b";
+            } else {
+                newStr += letter;
+            }
         } else {
-            newStr += letter  + "b";
+            newStr += letter;
         }
     }
     return newStr;

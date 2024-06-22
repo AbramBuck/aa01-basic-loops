@@ -5,12 +5,32 @@ more dots (.) than dashes (-).
 */
 
 // Your code here 
+function moreDotLessDash(str) {
+    let dotCount = 0;
+    let dashCount = 0;    
+    
+    for (let i = 0; i < str.length; i++) {
 
-// console.log(moreDotLessDash('2-D arrays are fun. I think.'));           // true
-// console.log(moreDotLessDash('Morse code is great.'));                   // true
-// console.log(moreDotLessDash('.... . -.--'));                            // true
-// console.log(moreDotLessDash('.--. .-. --- --. .-. .- -- -- . .-.'));    // false
-// console.log(moreDotLessDash('high-flying acrobat.'));                   // false
+        if ( str[i] === "." ) {
+            dotCount++;
+        } else if (str[i] === "-") {
+            dashCount++;
+        }
+    }
+    
+    if (dotCount > dashCount) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+ console.log(moreDotLessDash('2-D arrays are fun. I think.'));           // true
+ console.log(moreDotLessDash('Morse code is great.'));                   // true
+ console.log(moreDotLessDash('.... . -.--'));                            // true
+ console.log(moreDotLessDash('.--. .-. --- --. .-. .- -- -- . .-.'));    // false
+ console.log(moreDotLessDash('high-flying acrobat.'));                   // false
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = moreDotLessDash;

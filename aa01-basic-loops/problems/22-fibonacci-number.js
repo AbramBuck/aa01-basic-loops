@@ -6,16 +6,36 @@ sequence, we take the sum of the previous two numbers of the sequence.
 */
 
 // Your code here 
+function fib(n) {
+    if (n <= 0) {
+      return "Invalid input";
+    }
+  
+    if (n === 1 || n === 2) {
+      return 1;
+    }
+  
+    let prev1 = 1, prev2 = 1, current;
+    
+    for (let i = 3; i <= n; i++) {
+      current = prev1 + prev2;
+      prev1 = prev2;
+      prev2 = current;
+    }
+  
+    return current;
+  }
 
-// console.log(fib(1));    // 1
-// console.log(fib(2));    // 1
-// console.log(fib(3));    // 2
-// console.log(fib(4));    // 3
-// console.log(fib(5));    // 5
-// console.log(fib(6));    // 8
-// console.log(fib(10));   // 55
-// console.log(fib(11));   // 89
-// console.log(fib(12));   // 144
+
+ console.log(fib(1));    // 1
+ console.log(fib(2));    // 1
+ console.log(fib(3));    // 2
+ console.log(fib(4));    // 3
+ console.log(fib(5));    // 5
+ console.log(fib(6));    // 8
+ console.log(fib(10));   // 55
+ console.log(fib(11));   // 89
+ console.log(fib(12));   // 144
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = fib;
